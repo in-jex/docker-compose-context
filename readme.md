@@ -12,7 +12,7 @@ A simple tool to never forget what docker-compose did you ran
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
-
+## How to use
 ```shell
 echo "alias dcc=docker-compose-context" >> ~/.zshrc
 
