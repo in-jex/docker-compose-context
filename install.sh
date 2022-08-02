@@ -16,7 +16,7 @@ echo "\033[1;31mExecute 'source ~/.zshrc' before continuing\033[0;32m in the sam
 echo "Start by opening a folder with your docker-compose.yaml and call:"
 echo "\033[1;36m"
 echo "====="
-echo "dcc register ./docker-compose.yaml service_name"
+echo "dcc register service_name ./docker-compose.yaml"
 echo "====="
 echo "\033[0;32m"
 echo "You can later start/stop it from any terminal window in any folder"
