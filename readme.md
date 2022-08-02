@@ -1,6 +1,11 @@
 # docker-compose-context
 
-A simple tool to never forget what docker-compose did you run
+A simple tool to never forget what docker-compose did you ran
+
+## One-line zsh installation
+```shell
+ bash <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
+```
 
 ## Install locally
 ```shell

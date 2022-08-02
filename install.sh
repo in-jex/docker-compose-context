@@ -1,16 +1,30 @@
-git clone https://github.com/in-jex/docker-compose-context.git
-cd ./docker-compose-context
+git clone https://github.com/in-jex/docker-compose-context.git ~/.injex/utils/dcc
+cd ~/.injex/utils/dcc
 pip3 install -r requirements.txt
 python3 setup.py install
-echo "alias dcc=docker-compose-context" >> ~/.zshrc
-echo "Congrats, your dcc(docker-compose-context) is registered and ready to be used"
+echo "\033[0;36m"
+echo  ".__          __    __        __"
+echo  "|__|  ____   \ \   \ \      |__|  ____  ___  ___"
+echo  "|  | /    \   \ \   \ \     |  |_/ __ \ \  \/  /"
+echo  "|  ||   |  \  / /   / /     |  |\  ___/  >    <"
+echo  "|__||___|  / /_/   /_/  /\__|  | \___  >/__/\_ \\"
+echo  "         \/             \______|     \/       \/"
+echo "\033[0;32m"
+echo "alias dcc=docker-compose-context" >>~/.zshrc
+echo "Congrats, your dcc(docker-compose-context) is installed"
+echo "\033[1;31mExecute 'source ~/.zshrc' before continuing\033[0;32m in the same shell"
 echo "Start by opening a folder with your docker-compose.yaml and call:"
+echo "\033[1;36m"
 echo "====="
 echo "dcc register ./docker-compose.yaml service_name"
 echo "====="
+echo "\033[0;32m"
 echo "You can later start/stop it from any terminal window in any folder"
+echo "\033[1;36m"
 echo "====="
 echo "dcc up service_name"
 echo "dcc down service_name"
 echo "====="
-echo "For more commands use $(dcc) command"
+echo "\033[0;32m"
+echo "For more commands use \033[1;33m'dcc'\033[0;32m command"
+echo "\033[0m"
