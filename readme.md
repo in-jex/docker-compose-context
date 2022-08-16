@@ -12,6 +12,7 @@ You need to have GraalVM and Maven installed
 ```shell
 mvn install -Pnative
 ```
+
 ## How to use
 ```shell
 dcc register service_name ./docker-compose.yaml
