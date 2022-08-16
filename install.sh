@@ -1,7 +1,4 @@
-git clone https://github.com/in-jex/docker-compose-context.git ~/.injex/utils/dcc
-cd ~/.injex/utils/dcc
-pip3 install -r requirements.txt
-python3 setup.py install
+wget -O /usr/local/bin/dcc https://github.com/in-jex/docker-compose-context/releases/download/0.0.1/docker-compose-context-macos-intel
 echo "\033[0;36m"
 echo  ".__          __    __        __"
 echo  "|__|  ____   \ \   \ \      |__|  ____  ___  ___"
@@ -10,9 +7,7 @@ echo  "|  ||   |  \  / /   / /     |  |\  ___/  >    <"
 echo  "|__||___|  / /_/   /_/  /\__|  | \___  >/__/\_ \\"
 echo  "         \/             \______|     \/       \/"
 echo "\033[0;32m"
-echo "alias dcc=docker-compose-context" >>~/.zshrc
 echo "Congrats, your dcc(docker-compose-context) is installed"
-echo "\033[1;31mExecute 'source ~/.zshrc' before continuing\033[0;32m in the same shell"
 echo "Start by opening a folder with your docker-compose.yaml and call:"
 echo "\033[1;36m"
 echo "====="
