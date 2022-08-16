@@ -4,7 +4,7 @@ A simple tool to never forget what docker-compose did you ran
 
 ## [MACOS INTEL] One-line zsh installation
 ```shell
- bash <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
+ zsh <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
 ```
 
 ## Install locally
@@ -12,7 +12,7 @@ You need to have GraalVM and Maven installed
 ```shell
 mvn install -Pnative
 ```
-
+## How to use
 ```shell
 dcc register service_name ./docker-compose.yaml
 
