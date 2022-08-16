@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+  web2:
+    image: nginx
+    ports:
+      - "8081:80"

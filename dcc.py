@@ -154,6 +154,3 @@ cli.add_command(get)
 cli.add_command(list)
 cli.add_command(svc)
 svc.add_command(svc_list)
-
-if __name__ == '__main__':
-    cli()
