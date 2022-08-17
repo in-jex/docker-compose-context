@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI MacOS
+
+# Controls when the workflow will run
+on:
+  release:
+    types: [published]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: macos-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ayltai/setup-graalvm@v1
+        with:
+          java-version: 11
+          graalvm-version: 22.1.0
+          native-image: true
+      - name: Setup Maven
+        uses: stCarolas/setup-maven@v4.4
+        with:
+          maven-version: 3.8.2
+      - run: mvn -P native package
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: docker-compose-context-unix
+          # A file, directory or wildcard pattern that describes what to upload
+          path: ./target/docker-compose-context-1.0.0-SNAPSHOT-runner
