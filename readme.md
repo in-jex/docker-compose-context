@@ -7,10 +7,15 @@ A simple tool to never forget what docker-compose did you ran
  zsh <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
 ```
 
-## Install locally
+## Build locally
 You need to have GraalVM and Maven installed
 ```shell
-mvn install -Pnative
+mvn package -Dnative
+```
+
+For linux, you can try to run the following without GraalVM
+```
+mvn package -Dnative -Dquarkus.native.container-build=true
 ```
 
 ## How to use
