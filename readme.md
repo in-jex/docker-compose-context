@@ -2,7 +2,7 @@
 
 A simple tool to never forget what docker-compose did you ran
 
-## [MACOS INTEL] One-line zsh installation
+## One-line zsh installation
 ```shell
  zsh <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
 ```
