@@ -26,7 +26,7 @@ jobs:
           graalvm-version: 21.1.0
           native-image: true
       - name: Setup Maven Action
-        uses: s4u/setup-maven-action@< version >
+        uses: s4u/setup-maven-action@1.4.0
         with:
           java-version: 11
           maven-version: 3.8.5
