@@ -1,12 +1,10 @@
 package injex.dcc.command;
 
 import injex.dcc.utils.ConfigUtils;
-import injex.dcc.utils.StreamGobbler;
 import picocli.CommandLine;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.concurrent.Executors;
 
 @CommandLine.Command(name = "down",
         mixinStandardHelpOptions = true,
@@ -24,11 +22,9 @@ public class DownCommand implements Runnable {
         try {
             Map<String, String> config = ConfigUtils.loadConfig();
             String servicePath = config.get(serviceName);
-            Process process = Runtime.getRuntime()
-                    .exec("docker-compose -f " + servicePath + " down");
-            StreamGobbler streamGobbler =
-                    new StreamGobbler(process.getInputStream(), process.getErrorStream(), System.out::println);
-            Executors.newSingleThreadExecutor().submit(streamGobbler);
+            ProcessBuilder pb = new ProcessBuilder("docker-compose", "-f", servicePath, "down");
+            pb.inheritIO();
+            Process process = pb.start();
             int exitCode = process.waitFor();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

@@ -5,8 +5,6 @@ import injex.dcc.utils.FileUtils;
 import picocli.CommandLine;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 @CommandLine.Command(name = "register",
