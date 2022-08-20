@@ -23,7 +23,7 @@ dcc svc list service_name
 ```
 
 
-## One-line zsh installation
+## One-line installation
 ```shell
 curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh | sh
 ```
