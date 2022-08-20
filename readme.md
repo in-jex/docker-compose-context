@@ -24,8 +24,13 @@ dcc svc list service_name
 
 
 ## One-line installation
+On MacOS:
 ```shell
 curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh | sh
+```
+On Linux(just add sudo to sh command):
+```shell
+curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh | sudo sh
 ```
 
 ## Build locally
