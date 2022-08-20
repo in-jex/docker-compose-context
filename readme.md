@@ -1,22 +1,6 @@
 # docker-compose-context
 
-A simple tool to never forget what docker-compose did you ran
-
-## One-line zsh installation
-```shell
- zsh <(curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh)
-```
-
-## Build locally
-You need to have GraalVM and Maven installed
-```shell
-mvn package -Dnative
-```
-
-For linux, you can try to run the following without GraalVM
-```
-mvn package -Dnative -Dquarkus.native.container-build=true
-```
+Tired of having thousands of docker containers running on startup, just because you forgot to do `docker-compose down`? Controll them with `docker-compose-context`(`dcc`)! The tool allows you to register, control(up, down, restart), and monitor(todo) your `docker-compose` files from any terminal on your computer
 
 ## How to use
 ```shell
@@ -36,4 +20,21 @@ dcc deregister service_name
 dcc list
 # list available composer services to run(if you want to target e.g database)
 dcc svc list service_name
+```
+
+
+## One-line zsh installation
+```shell
+curl -s https://raw.githubusercontent.com/in-jex/docker-compose-context/master/install.sh | sh
+```
+
+## Build locally
+You need to have GraalVM and Maven installed
+```shell
+mvn package -Dnative
+```
+
+For linux, you can try to run the following without GraalVM
+```
+mvn package -Dnative -Dquarkus.native.container-build=true
 ```
