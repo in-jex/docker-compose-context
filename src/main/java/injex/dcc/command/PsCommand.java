@@ -21,7 +21,7 @@ public class PsCommand implements Runnable {
         try {
             if (serviceName.equals("")) {
                 System.out.println("Please specify service_name to be \"ps\"-ed");
-                System.out.println("e.g dcc down my_service");
+                System.out.println("e.g dcc ps my_service");
                 return;
             }
             Map<String, String> config = ConfigUtils.loadConfig();
