@@ -10,6 +10,8 @@ dcc register service_name ./docker-compose.yaml
 dcc up service_name
 # start only db for service_name
 dcc up service_name -s db
+# or
+dcc up service_name:db
 # show status of services running on service_name docker-compose
 dcc ps service_name
 # stop all for service_name
