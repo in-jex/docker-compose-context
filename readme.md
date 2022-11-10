@@ -1,4 +1,5 @@
 # docker-compose-context
+[![CI Linux](https://github.com/in-jex/docker-compose-context/actions/workflows/main-linux.yml/badge.svg?branch=master)](https://github.com/in-jex/docker-compose-context/actions/workflows/main-linux.yml) [![CI MacOS](https://github.com/in-jex/docker-compose-context/actions/workflows/main-macos.yml/badge.svg)](https://github.com/in-jex/docker-compose-context/actions/workflows/main-macos.yml)
 
 Tired of having thousands of docker containers running on startup, just because you forgot to do `docker-compose down`? Controll them with `docker-compose-context`(`dcc`)! The tool allows you to register, control(up, down, restart), and monitor(todo) your `docker-compose` files from any terminal on your computer
 
