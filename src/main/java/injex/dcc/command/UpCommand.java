@@ -1,5 +1,6 @@
 package injex.dcc.command;
 
+import injex.dcc.model.ComplexServiceName;
 import injex.dcc.utils.ConfigUtils;
 import picocli.CommandLine;
 
@@ -26,10 +27,13 @@ public class UpCommand implements Runnable {
     public void run() {
         try {
             Map<String, String> config = ConfigUtils.loadConfig();
-            String servicePath = config.get(serviceName);
+            ComplexServiceName complexServiceName = new ComplexServiceName(serviceName);
+            String servicePath = config.get(complexServiceName.getMainName());
             ArrayList<String> command = new ArrayList<>(List.of("docker-compose", "-f", servicePath, "up", "-d"));
             if (!service.isEmpty()) {
                 command.add(service);
+            } else if (complexServiceName.hasService()) {
+                command.add(complexServiceName.getService());
             }
             ProcessBuilder pb = new ProcessBuilder(command);
             pb.inheritIO();
