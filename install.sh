@@ -4,7 +4,7 @@ case "${unameOut}" in
     Darwin*)    release=docker-compose-context-macos;;
     *)          release=docker-compose-context-linux
 esac
-wget -O /usr/local/bin/dcc https://github.com/in-jex/docker-compose-context/releases/download/0.3.0/${release}
+wget -O /usr/local/bin/dcc https://github.com/in-jex/docker-compose-context/releases/download/0.4.0/${release}
 chmod a+x /usr/local/bin/dcc
 echo "\033[0;36m"
 echo  ".__          __    __        __"
