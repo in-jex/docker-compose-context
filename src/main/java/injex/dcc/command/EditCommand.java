@@ -10,7 +10,8 @@ import java.util.Map;
 
 @CommandLine.Command(name = "edit",
         mixinStandardHelpOptions = true,
-        description = "Edit your docker-compose without looking for a file"
+        description = "Edit your docker-compose without looking for a file",
+        aliases = {"modify"}
 )
 public class EditCommand implements Runnable {
 
