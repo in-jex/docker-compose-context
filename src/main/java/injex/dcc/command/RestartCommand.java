@@ -4,7 +4,8 @@ import picocli.CommandLine;
 
 @CommandLine.Command(name = "restart",
         mixinStandardHelpOptions = true,
-        description = "Restart(stop and start) your docker-compose from the global context"
+        description = "Restart(stop and start) your docker-compose from the global context",
+        aliases = "r"
 )
 public class RestartCommand implements Runnable {
 

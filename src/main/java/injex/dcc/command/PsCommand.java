@@ -9,7 +9,8 @@ import java.util.Map;
 
 @CommandLine.Command(name = "ps",
         mixinStandardHelpOptions = true,
-        description = "docker ps specified compose context"
+        description = "docker ps specified compose context",
+        aliases = "p"
 )
 public class PsCommand implements Runnable {
     @CommandLine.Parameters(paramLabel = "<service_name>",
