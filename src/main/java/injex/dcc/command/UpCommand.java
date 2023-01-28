@@ -11,7 +11,8 @@ import java.util.Map;
 
 @CommandLine.Command(name = "up",
         mixinStandardHelpOptions = true,
-        description = "Deregister your docker-compose from the global context"
+        description = "Deregister your docker-compose from the global context",
+        aliases = "u"
 )
 public class UpCommand implements Runnable {
 

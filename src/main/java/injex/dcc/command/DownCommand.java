@@ -10,7 +10,8 @@ import java.util.Map;
 @CommandLine.Command(name = "down",
         mixinStandardHelpOptions = true,
         description = "Deregister your docker-compose from the global context",
-        subcommands = {DownAllCommand.class}
+        subcommands = {DownAllCommand.class},
+        aliases = "d"
 )
 public class DownCommand implements Runnable {
 
